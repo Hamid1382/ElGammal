@@ -86,8 +86,8 @@ namespace ElGammal_Encryption
         }
         private readonly Random random = new();
         private readonly BigInteger bignum1 = ((BigInteger)2).ToPower(key_size - 1);
-        private readonly BigInteger bignum2 = ((BigInteger)2).ToPower(2 * key_size - 1);
-        private readonly List<ulong> primes = GeneratePrimes(2*key_size);
+        private readonly BigInteger bignum2 = ((BigInteger)2).ToPower(key_size);
+        private readonly List<ulong> primes = GeneratePrimes(key_size);
         public struct PublicKey
         {
             public BigInteger q, g, h;
